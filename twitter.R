@@ -13,10 +13,10 @@ library(base64enc)
 
 
 #Twitter Authentication 
-key="vdmYRmIuEwJiIZLS317lKH4j5"
-secret="WcZQjFUkwJZ47Bc2l4GIxEB3x1UJwMUTwA8ni9rSHuBNA6QxVv"
-accessToken = "111516799-CEiPUv85lDqKAPo4Yhy77aIJyowJKWc9lFcbfKEs"
-accessTokenSecret = "wlOQLOFW7ce7JWYVSMNP3XUajWHJxAGLPDVBkOv6LO0ZU"
+key="YOUR KEY"
+secret="YOUR SECRET"
+accessToken = "YOUR TOKEN"
+accessTokenSecret = "YOUR TOKEN SECRET"
 
 twitCred <- setup_twitter_oauth(key,secret,accessToken,accessTokenSecret)
 
