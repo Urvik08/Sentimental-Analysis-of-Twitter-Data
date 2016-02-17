@@ -23,10 +23,6 @@ twitCred <- setup_twitter_oauth(key,secret,accessToken,accessTokenSecret)
 download.file(url="http://curl.haxx.se/ca/cacert.pem", destfile="cacert.pem")
 
 
-#test 
-searchTwitter("iphone")
-
-
 N=2000  # tweets to request from each query
 S=200  # radius in miles
 lats=c(38.9,40.7,37.8,39,37.4,28,30,42.4,48,36,32.3,33.5,34.7,33.8,37.2,41.2,46.8,46.6,37.2,43,42.7,40.8,36.2,38.6,35.8,40.3,43.6,40.8,44.9,44.9, 28.4)
@@ -38,7 +34,6 @@ lons=c(-77,-74,-122,-105.5,-122,-82.5,-98,-71,-122,-115,-86.3,-112,-92.3,-84.4,-
 #       Cheyenne,Bisruk,Helena,Springfield,Madison,Lansing,Salt Lake City,Nashville
 #       Jefferson City,Raleigh,Harrisburg,Boise,Lincoln,Salem,St. Paul, Orlando
 
-GOP=do.call(rbind,lapply(1:length(lats), function(i) searchTwitter('GOP',lang="en",n=N,resultType="recent",geocode=paste(lats[i],lons[i],paste0(S,"mi"),sep=","))))
 
 GOP=do.call(rbind,lapply(1:length(lats), function(i) searchTwitter('MUSLIM',lang="en",n=N,since='2015-12-01', until='2015-12-31' ,geocode=paste(lats[i],lons[i],paste0(S,"mi"),sep=","))))
 
